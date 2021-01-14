@@ -28,3 +28,5 @@ def get_string_features(path,hasher):
     print "Extracted {0} strings from {1}".format(len(string_features),path)
     return hashed_features
 ```
+
+![曲線](https://github.com/tream565/ch8/blob/main/ch8.png)
