@@ -1,5 +1,5 @@
 # ch8
-從路徑豬的檔案尋找特徵
+從路徑中的檔案尋找特徵
 ```
 def get_string_features(path,hasher):
     # extract strings from binary file using regular expressions
