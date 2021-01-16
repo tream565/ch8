@@ -1,6 +1,6 @@
 # ch8
 從路徑中的檔案尋找特徵
-```
+```python
 def get_string_features(path,hasher):
    
     chars = r" -~"
@@ -29,7 +29,7 @@ def get_string_features(path,hasher):
     return hashed_features
 ```
 利用sklearn對特徵進行判斷此程式是否為惡意程式
-```
+```python
 def scan_file(path):
     if not os.path.exists("saved_detector.pkl"):
         print "It appears you haven't trained a detector yet!  Do this before scanning files."
@@ -45,7 +45,7 @@ def scan_file(path):
         print "It appears this file is benign.",`result_proba`
 ```
 利用隨機樹做訓練
-```
+```python
 def train_detector(benign_path,malicious_path,hasher):
     def get_training_paths(directory):
         targets = []
@@ -61,7 +61,7 @@ def train_detector(benign_path,malicious_path,hasher):
     pickle.dump((classifier,hasher),open("saved_detector.pkl","w+"))
 ```
 評估模型
-```
+```python
 def cv_evaluate(X,y,hasher):
     import random
     from sklearn import metrics
