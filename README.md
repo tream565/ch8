@@ -103,7 +103,7 @@ def cv_evaluate(X,y,hasher):
 由x，y可得到下圖
 ![曲線](https://github.com/tream565/ch8/blob/main/ch8.png)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
-#ch2
+# ch2
 改寫ch2的程式得出ch8所提供的程式是否能反組譯
 改寫後的程式在上面的test.py
 ![曲線](https://github.com/tream565/ch8/blob/main/ch2_disassembly_time.png)
