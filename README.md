@@ -60,6 +60,20 @@ def train_detector(benign_path,malicious_path,hasher):
     classifier.fit(X,y)
     pickle.dump((classifier,hasher),open("saved_detector.pkl","w+"))
 ```
+將惡意程式及正常程式丟進get_string_features得到x，用惡意程式路徑字數表達有幾個1，用正常程式的路徑字數表達有幾個0，將全部的1、0都list起來
+```python
+def get_training_data(benign_path,malicious_path,hasher):
+    def get_training_paths(directory):
+        targets = []
+        for path in os.listdir(directory):
+            targets.append(os.path.join(directory,path))
+        return targets
+    malicious_paths = get_training_paths(malicious_path)
+    benign_paths = get_training_paths(benign_path)
+    X = [get_string_features(path,hasher) for path in malicious_paths + benign_paths]
+    y = [1 for i in range(len(malicious_paths))] + [0 for i in range(len(benign_paths))]
+    return X, y
+```
 評估模型
 ```python
 def cv_evaluate(X,y,hasher):
