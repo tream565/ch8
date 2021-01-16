@@ -1,4 +1,4 @@
-# ch8
+# Final ch8
 從路徑中的檔案尋找特徵
 ```python
 def get_string_features(path,hasher):
@@ -100,4 +100,11 @@ def cv_evaluate(X,y,hasher):
     pyplot.grid()
     pyplot.show()
 ```
+由x，y可得到下圖
 ![曲線](https://github.com/tream565/ch8/blob/main/ch8.png)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+#ch2
+改寫ch2的程式得出ch8所提供的程式是否能反組譯
+改寫後的程式在上面的test.py
+![曲線](https://github.com/tream565/ch8/blob/main/ch2_disassembly_time.png)
+成功反組譯的程式跟結果以及無法反組譯的程式在上面的txt檔裡
